@@ -11,8 +11,8 @@
    <a-scene cursor="rayOrigin: mouse" raycaster="objects: [link];"
 	    embedded arjs='sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
         <a-assets>
-              <a-mixin id="texto" text="color: #262626; align: center; width: 11; side:double;"></a-mixin>
-              <a-mixin id="mtl0p" material="opacity: 0.05;"></a-mixin>
+              <a-mixin id="texto" text="color: black"; align: center; width: 11; side:double;"></a-mixin>
+              <a-mixin id="mtl0p" material="opacity: 0.1;"></a-mixin>
               <a-asset-item id="cadeira" src="./imagens/cadeira.glb"></a-asset-item>
               <a-asset-item id="cadeira1" src="./imagens/cadeira1.glb"></a-asset-item>
               <a-asset-item id="cadeira2" src="./imagens/cadeira2.glb"></a-asset-item>
@@ -36,7 +36,7 @@
        <a-marker type="barcode" value="0" smooth="smooth:true; smoothCount:1">
           <a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://paulohscwb.github.io/moveis/cadeira.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>
           <a-entity gltf-model="#cadeira" scale="3 3 3" position="1 0 0"></a-entity>
-          <a-plane mixin="mtl0p texto" material="color: #b3b3b3" width="3" position="0 0 -1" rotation="-90 0 0" 
+          <a-plane mixin="mtl0p texto" material="color: #b3b3b3" width="3" position="0 0 1" rotation="-90 0 0" 
 		text="Cadeira Antiga  |  design: Herica;"></a-plane>
        </a-marker>
 
