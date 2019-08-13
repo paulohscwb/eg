@@ -25,7 +25,8 @@
       <a-light type="ambient" intensity="1.2" color="grey"></a-light>
 
        <a-marker type="barcode" value="0" smooth="smooth:true; smoothCount:3">
-		<a-entity position="-3.3 1 -1.5" scale="0.65 0.65 0.65" rotation="-90 0 0">
+		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://paulohscwb.github.io/maquetes/aviao.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>
+	       <a-entity position="-3.3 1 -1.5" scale="0.65 0.65 0.65" rotation="-90 0 0">
 			<a-entity  gltf-model="#aviao"></a-entity>
 			<a-entity position="3.54 2.14 0.03" rotation="0 0 13.3">
 				<a-entity  gltf-model="#helice">
@@ -33,8 +34,8 @@
 				   dur="5000" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
 				</a-entity>
 			</a-entity>
-			<a-text position="0 0 5" mixin="texto" value="A airplane  |  design: Jeroen Hut" mixin="texto"></a-text>
 		</a-entity>
+	       <a-text position="-3.3 0.5 -1" mixin="texto" value="A airplane  |  design: Jeroen Hut" mixin="texto"></a-text>
        </a-marker>
 	
 	<a-marker type="barcode" value="1" smooth="smooth:true; smoothCount:1">
