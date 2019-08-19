@@ -1,0 +1,48 @@
+<!doctype HTML>
+  <html>
+    <head>
+	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style='margin: 0; overflow: hidden;'>
+<div style='position: fixed; top: 100px; width:100%; text-align: center; z-index: -2;'>
+	<font face="verdana" size="5" color="DarkSlateBlue">Carregando...</font>
+</div>
+   <a-scene cursor="rayOrigin: mouse" raycaster="objects: [link];"
+	    embedded arjs='sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
+        <a-assets>
+              <a-mixin id="texto" text="color: black; align: left; width: 5; side:double;" position="-0.5 0.1 1" rotation="-90 0 0"></a-mixin>
+              <a-mixin id="mtl0p" material="opacity: 0.1;"></a-mixin>
+              <a-asset-item id="modelo" src="helicoptero1.glb"></a-asset-item>
+		          <a-asset-item id="modelo1" src="helicea.glb"></a-asset-item>
+		          <a-asset-item id="modelo2" src="heliceb.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity camera></a-entity>
+
+      <a-light type="spot" intensity="0.8" color="#eaeaea" position="0 5 0" angle="90" rotation="-90 0 0" penumbra="0.5"></a-light>
+      <a-light type="ambient" intensity="1.2" color="grey"></a-light>
+
+       <a-marker type="barcode" value="0" smooth="smooth:true; smoothCount:3">
+		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://paulohscwb.github.io/eg/aviao.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
+	        <a-entity position="-3.7 0 -1.1" scale="0.6 0.6 0.6" rotation="0 160 0">
+			<a-entity  gltf-model="#modelo"></a-entity>
+			<a-entity position="0 0 0">
+				<a-entity  gltf-model="#modelo1" >
+				  <a-animation attribute="rotation"
+				   dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+				</a-entity>
+			</a-entity>
+			<a-entity position="0.037 1.947 5.267" rotation="10 0 0">
+				<a-entity  gltf-model="#modelo2">
+				  <a-animation attribute="rotation"
+				   dur="3500" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
+				</a-entity>
+			</a-entity>
+			<a-text rotation="0 -135 0" position="0 0 3.5" mixin="texto" value="UH60 helicopter  |  design: Yusup" mixin="texto"></a-text>
+		</a-entity>
+       </a-marker>
+		   
+    </a-scene>
+ </body>
+</html>
