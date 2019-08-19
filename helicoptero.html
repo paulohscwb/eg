@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maquetes</title>
+  <script src="https://aframe.io/releases/0.8.2/aframe.js"></script>
+  <script src="./scripts/aframe-orbit-controls.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+      <a-assets>
+		<a-asset-item id="modelo" src="helicoptero1.glb"></a-asset-item>
+		<a-asset-item id="modelo1" src="helicea.glb"></a-asset-item>
+		<a-asset-item id="modelo2" src="heliceb.glb"></a-asset-item>
+		<img id="ceu" src="imagens/ceu1.jpg">
+		<a-mixin id="texto" text="color: black; align: left; width: 8; side:double;" rotation="-45 0 0"></a-mixin>
+		</a-assets>
+	  
+	  
+	  <a-sky src="#ceu"></a-sky>
+		
+	  <a-entity camera="fov:20; near:1;" orbit-controls="target: 0 0 0; maxPolarAngle: 360; initialPosition: 5 7 21"></a-entity>
+	  	<a-entity position="0 -1 0" scale="1 1 1 " rotation="0 160 0">
+			<a-entity  gltf-model="#modelo"></a-entity>
+			<a-entity position="0 0 0">
+				<a-entity  gltf-model="#modelo1" >
+				  <a-animation attribute="rotation"
+				   dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+				</a-entity>
+			</a-entity>
+			<a-entity position="0.037 1.947 5.267" rotation="10 0 0">
+				<a-entity  gltf-model="#modelo2">
+				  <a-animation attribute="rotation"
+				   dur="3500" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
+				</a-entity>
+			</a-entity>
+			<a-text rotation="0 -135 0" position="0 0 3.5" mixin="texto" value="UH60 helicopter  |  design: Yusup" mixin="texto"></a-text>
+		</a-entity>
+		<a-entity light="type: ambient; color: #BBB; intensity:1.7;"></a-entity>
+		<a-entity light="type: directional; color: #BBB; intensity: 1.8" position="0 1 1"></a-entity>
+
+
+  </a-scene>
+</body>
+</html>
