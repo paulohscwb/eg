@@ -50,13 +50,15 @@
 	   
 	<a-marker type="barcode" value="1" smooth="smooth:true; smoothCount:3">
           <a-link mixin="lnk" href="imagens/casa2.html"></a-link>
-          <a-entity gltf-model="#casa2" position="-3.7 0 -1.1" scale="0.35 0.35 0.35" rotation="-90 0 0"></a-entity>
+          <a-entity position="-3.7 0 -1.1" rotation="-90 0 0">
+		<a-entity gltf-model="#casa2" scale="0.35 0.35 0.35"></a-entity>
+	  </a-entity>
   	  <a-text position="-5 0.5 -0.5" mixin="texto" value="SketchyKo Designs" mixin="texto"></a-text>
        </a-marker>
 	
 	<a-marker type="barcode" value="3" smooth="smooth:true; smoothCount:3">
           <a-link mixin="lnk" href="imagens/cadeira2.html"></a-link>
-          <a-entity position="-3.8 0 -1" rotation="-90 0 0" >
+          <a-entity position="-3.8 0 -1" rotation="-90 0 0">
 		<a-entity gltf-model="#cadeira2" scale="3.4 3.4 3.4" rotation="0 90 0"></a-entity>
 	  </a-entity>
   	  <a-text position="-5 0.5 -0.5" mixin="texto" value="Gran Kobi Pad  |  design: Alias" mixin="texto"></a-text>
