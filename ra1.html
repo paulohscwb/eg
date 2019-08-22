@@ -16,7 +16,7 @@
               <a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
 	 	<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
 	        <a-asset-item id="modelo2" src="./imagens/heliceb.glb"></a-asset-item>
-		<a-asset-item id="modelo3" src="./imagens/gladiador.obj"></a-asset-item>
+		<a-asset-item id="modelo3" src="./imagens/gladiador.glb"></a-asset-item>
 		<a-asset-item id="modelo3m" src="./imagens/gladiador.mtl"></a-asset-item>
         </a-assets>
 
@@ -48,7 +48,8 @@
 	<a-marker type="barcode" value="1" smooth="smooth:true; smoothCount:3">
 		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/gladiador.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
 	        <a-entity position="-3.7 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
-			<a-entity  obj-model="obj: #modelo3; mtl: #modelo3m"></a-entity>
+			<!--<a-entity  obj-model="obj: #modelo3; mtl: #modelo3m"></a-entity>-->
+			<a-entity  gltf-model="#modelo3"></a-entity>
 			<a-text rotation="0 -45 0" position="0 0 3.5" mixin="texto" value="Bracelete gladiador"></a-text>
 		</a-entity>
        </a-marker>
