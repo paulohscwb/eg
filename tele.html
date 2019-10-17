@@ -36,24 +36,18 @@
 
     <!-- Hands. -->
     
-      <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend; collisionEntities: [mixin='voxel'], #ground"
-        vive-controls="hand: left"
-        oculus-touch-controls="hand: left"
-        microsoft-motion-controls="hand: left"
-        daydream-controls="left" gearvr-controls="left">
-      </a-entity>
-      <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend; type: line; collisionEntities: [mixin='voxel'], #ground"
-        vive-controls="hand: right"
-        microsoft-motion-controls="hand: right"
-        oculus-touch-controls="hand: right"
-        daydream-controls="right" gearvr-controls="right">
-      </a-entity>
-    
     <a-entity id="blockHand" hand-controls="right" laser-controls controller-cursor intersection-spawn="event: click; mixin: voxel"></a-entity>
 
     <!-- Camera. -->
-    <a-camera id="cameraRig" look-controls>
-      <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
-    </a-camera>
+      
+      <a-entity id="cameraRig" look-controls>
+        <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
+      <!-- camera -->
+      <a-entity id="head" camera wasd-controls look-controls></a-entity>
+      <!-- hand controls -->
+      <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+      <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+    </a-entity>
+
   </a-scene>
 </body>
