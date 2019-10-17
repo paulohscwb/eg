@@ -26,8 +26,8 @@
     <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
 
     <!-- Hands. -->
-    <a-entity id="teleHand" hand-controls="left" teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
-    <a-entity id="blockHand" hand-controls="right" controller-cursor intersection-spawn="event: click; mixin: voxel"></a-entity>
+    <a-entity id="teleHand" hand-controls="right" teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+    <a-entity id="blockHand" hand-controls="left" laser-controls controller-cursor intersection-spawn="event: click; mixin: voxel"></a-entity>
 
     <!-- Camera. -->
     <a-camera>
