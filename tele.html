@@ -19,6 +19,16 @@
          random-color
          snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
       ></a-mixin>
+      <a-mixin id="controllers-right" vive-controls="hand: right"
+                 oculus-touch-controls="hand: right"
+                 windows-motion-controls="hand: right"
+                 gearvr-controls daydream-controls
+                 oculus-go-controls>
+        </a-mixin>
+        <a-mixin id="controllers-left" vive-controls="hand: left"
+                 oculus-touch-controls="hand: left"
+                 windows-motion-controls="hand: left">
+        </a-mixin>
     </a-assets>
 
     <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
