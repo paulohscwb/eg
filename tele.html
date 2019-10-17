@@ -36,7 +36,20 @@
     <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
 
     <!-- Hands. -->
-    <a-entity id="teleHand" hand-controls="left" teleport-controls="cameraRig: #cameraRig; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+    
+      <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend; collisionEntities: [mixin='voxel'], #ground"
+        vive-controls="hand: left"
+        oculus-touch-controls="hand: left"
+        microsoft-motion-controls="hand: left"
+        daydream-controls="left" gearvr-controls="left">
+      </a-entity>
+      <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend; type: line; collisionEntities: [mixin='voxel'], #ground"
+        vive-controls="hand: right"
+        microsoft-motion-controls="hand: right"
+        oculus-touch-controls="hand: right"
+        daydream-controls="right" gearvr-controls="right">
+      </a-entity>
+    
     <a-entity id="blockHand" hand-controls="right" laser-controls controller-cursor intersection-spawn="event: click; mixin: voxel"></a-entity>
 
     <!-- Camera. -->
