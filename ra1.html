@@ -15,7 +15,8 @@
         <a-assets>
               <a-mixin id="texto" text="color: black; align: left; width: 5; side:double;" position="-0.5 0.1 1" rotation="-90 0 0"></a-mixin>
               <a-mixin id="mtl0p" material="opacity: 0.1;"></a-mixin>
-              <a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
+	      <a-mixin id="lnk" rotation="-90 0 0" scale="0.75 0.75 0.75" position="0 0.2 0" link="title: VR; highlighted:true; backgroundColor:LightGray"></a-mixin>
+	        <a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
 	 	<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
 	        <a-asset-item id="modelo2" src="./imagens/heliceb.glb"></a-asset-item>
 		<a-asset-item id="modelo3" src="./imagens/gladiador.glb"></a-asset-item>
@@ -34,8 +35,8 @@
       <a-light type="ambient" intensity="0.6" color="grey"></a-light>
 
        <a-marker type="barcode" value="4" smooth="smooth:true; smoothCount:3">
-		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://paulohscwb.github.io/eg/helicoptero.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-3 0 -1.1" scale="0.6 0.6 0.6" rotation="0 180 0">
+		<a-link mixin="lnk" href="http://paulohscwb.github.io/eg/helicoptero.html"></a-link> 
+	       <a-entity position="-3 0 -1.1" scale="0.6 0.6 0.6" rotation="0 180 0">
 			<a-entity  gltf-model="#modelo"></a-entity>
 			<a-entity position="0 0 0">
 				<a-entity  gltf-model="#modelo1" >
@@ -54,22 +55,22 @@
        </a-marker>
 	   
 	<a-marker type="barcode" value="5" smooth="smooth:true; smoothCount:3">
-		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/gladiador.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
+		<a-link mixin="lnk" href="http://www.degraf.ufpr.br/docentes/paulo/lightbox/gladiador.html"></a-link>
+		<a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
 			<a-entity  gltf-model="#modelo3"></a-entity>
 			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Bracelete gladiador"></a-text>
 		</a-entity>
        </a-marker>
 	<a-marker type="barcode" value="6" smooth="smooth:true; smoothCount:3">
-		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel4.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
+		<a-link mixin="lnk" href="http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel4.html"></a-link>
+		<a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
 			<a-entity  gltf-model="#modelo4"></a-entity>
 			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Anel de pedra azul"></a-text>
 		</a-entity>
        </a-marker>
 	<a-marker type="barcode" value="7" smooth="smooth:true; smoothCount:3">
-		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel6.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
+		<a-link mixin="lnk" href="http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel6.html"></a-link>
+		<a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
 			<a-entity  gltf-model="#modelo5"></a-entity>
 			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Anel estamparia"></a-text>
 		</a-entity>
