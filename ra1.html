@@ -19,7 +19,13 @@
 	 	<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
 	        <a-asset-item id="modelo2" src="./imagens/heliceb.glb"></a-asset-item>
 		<a-asset-item id="modelo3" src="./imagens/gladiador.glb"></a-asset-item>
-		<a-asset-item id="modelo3m" src="./imagens/gladiador.mtl"></a-asset-item>
+		<a-asset-item id="modelo4" src="./imagens/anelpedraazul.glb"></a-asset-item>
+		<a-asset-item id="modelo5" src="./imagens/anelestamparia.glb"></a-asset-item>
+	      <a-asset-item id="casa1" src="./imagens/casa1.glb"></a-asset-item>
+              <a-asset-item id="casa2" src="./imagens/casa2.glb"></a-asset-item>
+              <a-asset-item id="helice" src="./imagens/helice1.glb"></a-asset-item>
+              <a-asset-item id="aviao" src="./imagens/aviao.glb"></a-asset-item>
+	      <a-asset-item id="cadeira2" src="./imagens/cadeira2.glb"></a-asset-item>
         </a-assets>
 
         <a-entity camera></a-entity>
@@ -27,9 +33,9 @@
       <a-light type="spot" intensity="1.6" color="#eaeaea" position="0 5 0" angle="90" rotation="-90 0 0" penumbra="0.5"></a-light>
       <a-light type="ambient" intensity="0.6" color="grey"></a-light>
 
-       <a-marker type="barcode" value="0" smooth="smooth:true; smoothCount:3">
+       <a-marker type="barcode" value="4" smooth="smooth:true; smoothCount:3">
 		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://paulohscwb.github.io/eg/helicoptero.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-3.7 0 -1.1" scale="0.6 0.6 0.6" rotation="0 180 0">
+	        <a-entity position="-3 0 -1.1" scale="0.6 0.6 0.6" rotation="0 180 0">
 			<a-entity  gltf-model="#modelo"></a-entity>
 			<a-entity position="0 0 0">
 				<a-entity  gltf-model="#modelo1" >
@@ -47,12 +53,25 @@
 		</a-entity>
        </a-marker>
 	   
-	<a-marker type="barcode" value="1" smooth="smooth:true; smoothCount:3">
+	<a-marker type="barcode" value="5" smooth="smooth:true; smoothCount:3">
 		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/gladiador.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
-	        <a-entity position="-6 0 -1.1" scale="0.07 0.07 0.07" rotation="0 0 0">
-			<!--<a-entity  obj-model="obj: #modelo3; mtl: #modelo3m"></a-entity>-->
+	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
 			<a-entity  gltf-model="#modelo3"></a-entity>
-			<a-text rotation="0 -45 0" position="0 0 3.5" mixin="texto" value="Bracelete gladiador"></a-text>
+			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Bracelete gladiador"></a-text>
+		</a-entity>
+       </a-marker>
+	<a-marker type="barcode" value="6" smooth="smooth:true; smoothCount:3">
+		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel4.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
+	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
+			<a-entity  gltf-model="#modelo4"></a-entity>
+			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Anel de pedra azul"></a-text>
+		</a-entity>
+       </a-marker>
+	<a-marker type="barcode" value="7" smooth="smooth:true; smoothCount:3">
+		<a-entity position="0 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5" link="href: http://www.degraf.ufpr.br/docentes/paulo/lightbox/anel6.html; title: VR; highlighted:true; backgroundColor:LightGray;"></a-entity>	       
+	        <a-entity position="-2 0 -1.1" scale="0.05 0.05 0.05" rotation="0 0 0">
+			<a-entity  gltf-model="#modelo5"></a-entity>
+			<a-text rotation="0 -45 0" position="0 0 1" mixin="texto" value="Anel estamparia"></a-text>
 		</a-entity>
        </a-marker>
 		   
