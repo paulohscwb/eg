@@ -11,48 +11,47 @@
 <div style='color:#fada91; position: fixed; bottom: 1vh; left:1vw; width:80vw; z-index: 5; font-family: Calibri; font-size:3vh; font-weight:bold; text-shadow:1px 1px 1px grey;'>paulohscwb@gmail.com <br> &copy; 2022 Paulo Henrique Siqueira</div>
   <a-scene cursor="rayOrigin: mouse" raycaster="objects: .lnk;" 
 	   embedded renderer="logarithmicDepthBuffer: true; colorManagement: true;" arjs='sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
-        <a-assets>
-            <a-mixin id="texto" text="color: black; align: left; width: 5; side:double;" position="-0.5 0.1 1" rotation="-90 0 0"></a-mixin>
-            <a-mixin id="mtl0p" material="opacity: 0.1;"></a-mixin>
-			<a-mixin id="lnk" rotation="-90 0 0" scale="0.75 0.75 0.75" position="0 0.2 0" link="title: VR; highlighted:true; backgroundColor:LightGray"></a-mixin>
-	        <a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
-			<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
-	        <a-asset-item id="modelo2" src="./imagens/heliceb.glb"></a-asset-item>
-			<a-asset-item id="modelo3" src="./imagens/gladiador.glb"></a-asset-item>
-			<a-asset-item id="modelo4" src="./imagens/anelpedraazul.glb"></a-asset-item>
-			<a-asset-item id="modelo5" src="./imagens/anelestamparia.glb"></a-asset-item>
-			<a-asset-item id="casa1" src="./imagens/casa1.glb"></a-asset-item>
-            <a-asset-item id="casa2" src="./imagens/casa2.glb"></a-asset-item>
-            <a-asset-item id="helice" src="./imagens/helice1.glb"></a-asset-item>
-            <a-asset-item id="aviao" src="./imagens/aviao.glb"></a-asset-item>
-			<a-asset-item id="cadeira2" src="./imagens/cadeira2.glb"></a-asset-item>
-        </a-assets>
+	<a-assets>
+		<a-mixin id="texto" text="color: black; align: left; width: 5; side:double;" position="-0.5 0.1 1" rotation="-90 0 0"></a-mixin>
+		<a-mixin id="mtl0p" material="opacity: 0.1;"></a-mixin>
+		<a-mixin id="lnk" rotation="-90 0 0" scale="0.75 0.75 0.75" position="0 0.2 0" link="title: VR; highlighted:true; backgroundColor:LightGray"></a-mixin>
+		<a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
+		<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
+		<a-asset-item id="modelo2" src="./imagens/heliceb.glb"></a-asset-item>
+		<a-asset-item id="modelo3" src="./imagens/gladiador.glb"></a-asset-item>
+		<a-asset-item id="modelo4" src="./imagens/anelpedraazul.glb"></a-asset-item>
+		<a-asset-item id="modelo5" src="./imagens/anelestamparia.glb"></a-asset-item>
+		<a-asset-item id="casa1" src="./imagens/casa1.glb"></a-asset-item>
+		<a-asset-item id="casa2" src="./imagens/casa2.glb"></a-asset-item>
+		<a-asset-item id="helice" src="./imagens/helice1.glb"></a-asset-item>
+		<a-asset-item id="aviao" src="./imagens/aviao.glb"></a-asset-item>
+		<a-asset-item id="cadeira2" src="./imagens/cadeira2.glb"></a-asset-item>
+	</a-assets>
 
-        <a-entity camera></a-entity>
+    <a-entity camera></a-entity>
 
-      <!--<a-light type="spot" intensity="2.2" color="#eaeaea" position="0 5 0" angle="90" rotation="-90 0 0" penumbra="0.5"></a-light>
-      	--><a-entity light="type: directional; color: #DCE0D8; intensity: 2" position="-1 1 1"></a-entity>
-	<a-light type="ambient" intensity="0.8" color="#DCE0D8"></a-light>
+	<a-entity light="type: directional; color: white; intensity: 0.7" position="-1 1 1"></a-entity>
+	<a-light type="ambient" intensity="0.7" color="#DCE0D8"></a-light>
 
-       <a-marker type="barcode" value="4" smooth="smooth:true; smoothCount:3">
-		<a-link mixin="lnk" href="http://paulohscwb.github.io/eg/helicoptero.html"></a-link> 
-	       <a-entity position="-3 0 0" scale="0.6 0.6 0.6" rotation="0 -90 0">
-			<a-entity  gltf-model="#modelo"></a-entity>
-			<a-entity position="0 0 0">
-				<a-entity  gltf-model="#modelo1" >
-				  <a-animation attribute="rotation"
-				   dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-				</a-entity>
+	<a-marker type="barcode" value="4" smooth="smooth:true; smoothCount:3">
+		<a-link class="lnk" mixin="lnk" href="helicoptero.html"></a-link> 
+	   <a-entity position="-3 0 0" scale="0.6 0.6 0.6" rotation="0 -90 0">
+		<a-entity  gltf-model="#modelo"></a-entity>
+		<a-entity position="0 0 0">
+			<a-entity  gltf-model="#modelo1" >
+			  <a-animation attribute="rotation"
+			   dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
 			</a-entity>
-			<a-entity position="0.037 1.947 5.267" rotation="10 0 0">
-				<a-entity  gltf-model="#modelo2">
-				  <a-animation attribute="rotation"
-				   dur="3500" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
-				</a-entity>
+		</a-entity>
+		<a-entity position="0.037 1.947 5.267" rotation="10 0 0">
+			<a-entity  gltf-model="#modelo2">
+			  <a-animation attribute="rotation"
+			   dur="3500" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
 			</a-entity>
+		</a-entity>
 			<a-text rotation="0 -90 0" position="0 0 3.5" mixin="texto" value="UH60 helicopter  |  design: Yusup" mixin="texto"></a-text>
 		</a-entity>
-       </a-marker>
+	</a-marker>
 	   
 	<a-marker type="barcode" value="5" smooth="smooth:true; smoothCount:3">
 		<a-link mixin="lnk" href="http://www.degraf.ufpr.br/docentes/paulo/lightbox/gladiador.html"></a-link>
