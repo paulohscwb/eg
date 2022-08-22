@@ -13,19 +13,19 @@
 	</div>
     <a-scene>
       <a-assets>
-		<a-asset-item id="modelo" src="gladiador.glb"></a-asset-item>
+		<a-asset-item id="modelo" src="anelestamparia.glb"></a-asset-item>
 		<img id="ceu" src="imagens/ceu1.jpg">
-		<a-mixin id="texto" text="color: black; align: center; width: 4; side:double;" rotation="-45 -30 0"></a-mixin>
+		<a-mixin id="texto" text="color: black; align: center; width: 4; side:double;" rotation="-45 30 0"></a-mixin>
 		<a-mixin id="luz" light="type: directional; color: #BBB; intensity: 0.7"></a-mixin>
 		</a-assets>
 	  
 	  <a-sky color="rgba(150,200,255)"></a-sky>
 		
 	  <a-entity camera="fov:50; near:0.1;" orbit-controls="target: 0 0 0; maxPolarAngle: 360; initialPosition: 0 0 5"></a-entity>
-	  	<a-entity position="0 0 0" scale="0.1 0.1 0.1" rotation="0 -30 0">
+	  	<a-entity position="0 0 0" scale="0.08 0.08 0.08" rotation="0 30 0">
 			<a-gltf-model src="#modelo" rotation="90 0 0"></a-gltf-model>
 		</a-entity>
-		<a-text position="0 -1 0.8" mixin="texto" value="Bracelete gladiador"></a-text>
+		<a-text position="0 -1 0.5" mixin="texto" value="Anel com estamparia"></a-text>
 		<a-entity light="type: ambient; color: #FFF; intensity:0.3;"></a-entity>
 		<a-entity mixin="luz" position="-1 0 1"></a-entity> 
 		<a-entity mixin="luz" position="1 0 1"></a-entity>
