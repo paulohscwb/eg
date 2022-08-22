@@ -38,16 +38,10 @@
 		<a-entity position="-3 0 0" scale="0.6 0.6 0.6" rotation="0 -90 0">
 		<a-entity  gltf-model="#modelo"></a-entity>
 		<a-entity position="0 0 0">
-			<a-entity  gltf-model="#modelo1" >
-			  <a-animation attribute="rotation"
-			   dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-			</a-entity>
+			<a-gltf-model src="#modelo1" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear"></a-gltf-model>
 		</a-entity>
 		<a-entity position="0.037 1.947 5.267" rotation="10 0 0">
-			<a-entity  gltf-model="#modelo2">
-			  <a-animation attribute="rotation"
-			   dur="3500" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
-			</a-entity>
+			<a-gltf-model src="#modelo2" animation="property: rotation; to: 360 0 0; loop: true; dur: 3200; easing: linear"></a-gltf-model>
 		</a-entity>
 			<a-text rotation="0 -90 0" position="0 0 3.5" mixin="texto" value="UH60 helicopter  |  design: Yusup" mixin="texto"></a-text>
 		</a-entity>

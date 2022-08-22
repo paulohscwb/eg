@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <a-scene>
+    <a-scene renderer="logarithmicDepthBuffer: true; colorManagement: true;">
       <a-assets>
 		<a-asset-item id="modelo" src="./imagens/helicoptero1.glb"></a-asset-item>
 		<a-asset-item id="modelo1" src="./imagens/helicea.glb"></a-asset-item>
@@ -16,8 +16,7 @@
 		<a-mixin id="texto" text="color: black; align: left; width: 8; side:double;" rotation="-45 0 0"></a-mixin>
 		</a-assets>
 	  
-	  
-	  <a-sky src="#ceu"></a-sky>
+	    <a-sky src="#ceu"></a-sky>
 		
 	  <a-entity camera="fov:20; near:1;" orbit-controls="target: 0 0 0; maxPolarAngle: 360; initialPosition: 5 7 21"></a-entity>
 	  	<a-entity position="0 -1 0" scale="1 1 1 " rotation="0 160 0">
