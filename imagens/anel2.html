@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jóias</title>
+  <meta charset="utf-8"/>
+  <script src="https://aframe.io/releases/1.3.0/aframe.js"></script>
+  <script src="https://paulohscwb.github.io/polyhedra/scripts/aframe-orbit-controls.min.js"></script>
+</head>
+
+<body>
+<div style='position: fixed; top: 100px; width:100%; text-align: center; z-index: -2;'>
+		<font face="verdana" size="5" color="DarkSlateBlue">Carregando...</font>
+	</div>
+    <a-scene renderer="logarithmicDepthBuffer: true; colorManagement: true;">
+      <a-assets>
+		<a-asset-item id="modelo" src="anelaros.glb"></a-asset-item>
+		<img id="ceu" src="imagens/ceu1.jpg">
+		<a-mixin id="texto" text="color: black; align: center; width: 4; side:double;" rotation="-45 -30 0"></a-mixin>
+		<a-mixin id="luz" light="type: directional; color: #BBB; intensity: 0.7"></a-mixin>
+		</a-assets>
+	  	  
+	  <a-sky color="rgba(150,200,255)"></a-sky>
+		
+	  <a-entity camera="fov:50; near:0.1;" orbit-controls="target: 0 0 0; maxPolarAngle: 360; initialPosition: 0 0 5"></a-entity>
+	  	<a-entity position="0 -1 0" scale="1 1 1" rotation="0 -30 0">
+			<a-entity gltf-model="#modelo"></a-entity>
+		</a-entity>
+		<a-text position="0 -1 0.5" mixin="texto" value="Anel Rhino"></a-text>
+		<a-entity light="type: ambient; color: #FFF; intensity:0.3;"></a-entity>
+		<a-entity mixin="luz" position="-1 0 1"></a-entity> 
+		<a-entity mixin="luz" position="1 0 1"></a-entity>
+		<a-entity mixin="luz" position="-1 0 -1"></a-entity>
+		<a-entity mixin="luz" position="1 0 -1"></a-entity>
+		<a-entity mixin="luz" position="0 1 0" intensity="0.5"></a-entity>
+		<a-entity mixin="luz" position="0 -1 0" intensity="0.1"></a-entity>
+
+  </a-scene>
+</body>
+</html>
