@@ -29,6 +29,7 @@
 		<a-asset-item id="alianca1" src="./imagens/alianca1.gltf"></a-asset-item>
 		<a-asset-item id="anel3" src="./imagens/anel3.glb"></a-asset-item>
 		<a-asset-item id="anelaros" src="./imagens/anelaros.glb"></a-asset-item>
+		<a-asset-item id="anel1" src="./imagens/anel1.glb"></a-asset-item>
 	</a-assets>
 
     <a-entity camera></a-entity>
@@ -96,6 +97,13 @@
 		<a-link class="lnk" mixin="lnk" href="imagens/anelaros.html"></a-link>
 		<a-entity position="-3 2 0" scale="0.07 0.07 0.07">
 			<a-entity gltf-model="#anelaros" rotation="90 0 0"></a-entity>
+		</a-entity>
+    </a-marker>
+	
+	<a-marker type="barcode" value="11" smooth="smooth:true; smoothCount:3">
+		<a-link class="lnk" mixin="lnk" href="imagens/anel1.html"></a-link>
+		<a-entity position="-3 2 0" scale="0.07 0.07 0.07">
+			<a-entity gltf-model="#anel1" rotation="90 0 0"></a-entity>
 		</a-entity>
     </a-marker>
 	
